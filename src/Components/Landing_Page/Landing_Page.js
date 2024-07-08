@@ -1,42 +1,36 @@
-import React from "react"; // Importing React library for building UI components
-import "./Landing_Page.css"; // Importing styles for Landing Page component
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Landing_Page.css";
 
-// Functional component for the Landing Page
 const Landing_Page = () => {
   return (
-    <section className="hero-section"> {/* Hero section container */}
+    <section className="hero-section">
       <div>
-        <div data-aos="fade-up" className="flex-hero"> {/* Div container with fade-up animation */}
-            
-            <h1>
-              Your Health<br/>
-
- {/* Main heading for the Landing Page */}
-              <span className="text-gradient">
-                Our Responsibility {/* Subheading with gradient effect */}
-              </span>
-            </h1>
-            
-            <div class="blob-cont"> {/* Container for blob shape */}
-                <div class="blue blob"></div> {/* Blue blob shape */}
-            </div>
-            
-            <div class="blob-cont"> {/* Another container for blob shape */}
-                <div class="blue1 blob"></div> {/* Blue1 blob shape */}
-            </div>
-            
-            <h4>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque at quae ducimus. Suscipit omnis quibusdam non cum rem voluptatem!
-            </h4> {/* Description text for the Landing Page */}
-            
-            <a href="#services"> {/* Link to scroll down to services section */}
-              <button class="button">Get Started</button> {/* Button to navigate to services section */}
-            </a>
-            
+        <div data-aos="fade-up" className="flex-hero">
+          <h1>
+            Your Health
+            <br />
+            <span className="text-gradient">Our Responsibility</span>
+          </h1>
+          <div className="blob-cont">
+            <div className="blue blob"></div>
+          </div>
+          <div className="blob-cont">
+            <div className="blue1 blob"></div>
+          </div>
+          <h4>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque at
+            quae ducimus. Suscipit omnis quibusdam non cum rem voluptatem!
+          </h4>
+          <Link to="Home">
+            <button type="button" className="button">
+              Get Started
+            </button>
+          </Link>
         </div>
       </div>
     </section>
   );
 };
 
-export default Landing_Page; // Exporting Landing Page component as default
+export default Landing_Page;
